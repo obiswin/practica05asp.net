@@ -1,0 +1,139 @@
+﻿@model IEnumerable<Empresa22.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Index";
+    
+}
+     
+
+<h1>TABLA DE CLIENTES</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+
+<table id="btcliente" class="table table-bordered" style="width:100%;">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ci)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CorreoElectronico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ci)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CorreoElectronico)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Direccion)
+                </td>
+                <td>
+                    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.ClienteId">Edit</a> 
+                    <a asp-action="Details" class="btn btn-danger" asp-route-id="@item.ClienteId">Details</a> 
+                    <a asp-action="Delete" class="btn btn-warning" asp-route-id="@item.ClienteId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<!--<div class="row mg-4">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header">
+                TABLA DE CLIENTES
+            </div>
+            <div class="card-body"  style="align-content:center;">
+                <table id="btcliente" class="display" style="width:100%;border:double" >
+                   
+                    <thead >
+                        <tr ">
+                            <th >
+                                @Html.DisplayNameFor(model => model.Nombre)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Ci)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.CorreoElectronico)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Telefono)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Direccion)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Nombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Ci)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CorreoElectronico)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Telefono)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Direccion)
+                                </td>
+                                <td>
+                                    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.ClienteId">Edit</a> |
+                                    <a asp-action="Details" class="btn btn-danger" asp-route-id="@item.ClienteId">Details</a> |
+                                    <a asp-action="Delete" class="btn btn-warning" asp-route-id="@item.ClienteId">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+   
+</div>-->
+
+@section Scripts{
+         
+    <script>
+        
+        $(document).ready(function () {
+            let table = new DataTable('#btcliente');
+        });
+    </script>
+     
+    
+}
+

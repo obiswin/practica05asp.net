@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Empresa22.Models.DetalleVentum>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>TABLA DE DETALLE DE VENTAS</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+<table id="btcliente" class="table table-bordered" style="width:100%;">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioUnitario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Venta)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioUnitario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Producto.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Venta.FechaVenta)
+            </td>
+            <td>
+                <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.DetalleVentaId">Edit</a> |
+                <a asp-action="Details" class="btn btn-danger" asp-route-id="@item.DetalleVentaId">Details</a> |
+                <a asp-action="Delete" class="btn btn-warning" asp-route-id="@item.DetalleVentaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@section Scripts {
+
+    <script>
+
+        $(document).ready(function () {
+            let table = new DataTable('#btcliente');
+        });
+    </script>
+
+
+}

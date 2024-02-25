@@ -1,0 +1,79 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="datatable\datatable\js\dataTables.bootstrap.js" />
+    <Content Include="datatable\datatable\js\dataTables.bootstrap.min.js" />
+    <Content Include="datatable\datatable\js\dataTables.bootstrap.min.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.bootstrap.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.bootstrap4.js" />
+    <Content Include="datatable\datatable\js\dataTables.bootstrap4.min.js" />
+    <Content Include="datatable\datatable\js\dataTables.bootstrap4.min.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.bootstrap4.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.bootstrap5.js" />
+    <Content Include="datatable\datatable\js\dataTables.bootstrap5.min.js" />
+    <Content Include="datatable\datatable\js\dataTables.bootstrap5.min.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.bootstrap5.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.bulma.js" />
+    <Content Include="datatable\datatable\js\dataTables.bulma.min.js" />
+    <Content Include="datatable\datatable\js\dataTables.bulma.min.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.bulma.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.dataTables.js" />
+    <Content Include="datatable\datatable\js\dataTables.dataTables.min.js" />
+    <Content Include="datatable\datatable\js\dataTables.dataTables.min.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.dataTables.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.foundation.js" />
+    <Content Include="datatable\datatable\js\dataTables.foundation.min.js" />
+    <Content Include="datatable\datatable\js\dataTables.foundation.min.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.foundation.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.jqueryui.js" />
+    <Content Include="datatable\datatable\js\dataTables.jqueryui.min.js" />
+    <Content Include="datatable\datatable\js\dataTables.jqueryui.min.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.jqueryui.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.js" />
+    <Content Include="datatable\datatable\js\dataTables.material.js" />
+    <Content Include="datatable\datatable\js\dataTables.material.min.js" />
+    <Content Include="datatable\datatable\js\dataTables.material.min.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.material.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.min.js" />
+    <Content Include="datatable\datatable\js\dataTables.min.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.semanticui.js" />
+    <Content Include="datatable\datatable\js\dataTables.semanticui.min.js" />
+    <Content Include="datatable\datatable\js\dataTables.semanticui.min.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.semanticui.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.tailwindcss.js" />
+    <Content Include="datatable\datatable\js\dataTables.uikit.js" />
+    <Content Include="datatable\datatable\js\dataTables.uikit.min.js" />
+    <Content Include="datatable\datatable\js\dataTables.uikit.min.mjs" />
+    <Content Include="datatable\datatable\js\dataTables.uikit.mjs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="5.3.3" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="jQuery" Version="3.7.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0-preview5.24024.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0-preview.1.24081.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0-preview.1.24081.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="datatable\datatable\img\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\img\2728262.png" />
+  </ItemGroup>
+
+</Project>

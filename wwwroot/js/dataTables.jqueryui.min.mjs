@@ -1,0 +1,4 @@
+/*! DataTables jQuery UI integration
+ * ©2011-2014 SpryMedia Ltd - datatables.net/license
+ */
+import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;$.extend(!0,DataTable.ext.classes,{container:"dt-container dt-jqueryui",paging:{active:"ui-state-disabled",button:"fg-button ui-button ui-state-default",container:"dt-paging fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi",disabled:"ui-state-disabled"},thead:{cell:"ui-state-default"},tfoot:{cell:"ui-state-default"}}),DataTable.ext.renderer.layout.jqueryui=function(t,a,e){var l=!1,u=$("<div/>",{class:"dt-layout-row ui-helper-clearfix"}).appendTo(a);$.each(e,function(t,a){t=$("<div/>",{id:a.id||null,class:"dt-layout-cell dt-"+t+" "+(a.className||"")}).append(a.contents).appendTo(u);$(a.contents).hasClass("dataTable")&&(l=!0,t.addClass("table"))}),l||u.addClass("fg-toolbar ui-toolbar ui-widget-header")};export default DataTable;
